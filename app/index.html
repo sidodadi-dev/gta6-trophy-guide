@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Leonida Nights — GTA VI Trophy Guide &amp; Tracker</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="masthead">
+  <div class="masthead-text">
+    <p class="kicker">Grand Theft Auto VI · PlayStation 5 · 55 trophies</p>
+    <h1>Leonida <span class="glow">Nights</span></h1>
+    <p class="tagline">The complete trophy guide &amp; tracker — every trophy explained in our own words, with its sources cited, a five-stage roadmap to the platinum, and your progress saved on this device.</p>
+  </div>
+  <div class="progress-card">
+    <p class="progress-big"><span id="earned-count">0</span> <span class="of">of 55 earned</span></p>
+    <div class="bar"><div id="bar-fill"></div></div>
+    <p id="grade-counts" class="grade-counts"></p>
+    <p id="platinum-note" class="platinum-note"></p>
+  </div>
+</header>
+
+<nav class="view-tabs" aria-label="Views">
+  <button id="tab-tracker" class="tab active" type="button">Tracker &amp; Guide</button>
+  <button id="tab-roadmap" class="tab" type="button">Roadmap to Platinum</button>
+  <span class="tab-spacer"></span>
+  <button id="export" class="tool" type="button">Export progress</button>
+  <label class="tool import-tool">Import progress <input id="import" type="file" accept="application/json,.json"></label>
+  <button id="reset" class="tool danger" type="button">Reset</button>
+</nav>
+
+<section id="tracker-view">
+  <div class="toolbar">
+    <input id="search" type="search" placeholder="Search trophies…" aria-label="Search trophies">
+    <div class="chips" id="kind-chips" role="group" aria-label="Filter by kind">
+      <button type="button" data-kind="all" class="chip active">All</button>
+      <button type="button" data-kind="story" class="chip">Story</button>
+      <button type="button" data-kind="missable" class="chip warn">Missable</button>
+      <button type="button" data-kind="collectible" class="chip">Collectibles</button>
+      <button type="button" data-kind="activity" class="chip">Activities</button>
+      <button type="button" data-kind="online" class="chip">Online</button>
+      <button type="button" data-kind="world" class="chip">World</button>
+    </div>
+    <label class="select-label">Grade
+      <select id="grade">
+        <option value="all">All grades</option>
+        <option value="platinum">Platinum</option>
+        <option value="gold">Gold</option>
+        <option value="silver">Silver</option>
+        <option value="bronze">Bronze</option>
+      </select>
+    </label>
+    <label class="switch"><input id="hide-earned" type="checkbox"> Hide earned</label>
+    <label class="switch"><input id="spoiler" type="checkbox"> Spoiler shield <span class="hint">(hides story trophies)</span></label>
+  </div>
+  <p id="showing" class="showing"></p>
+  <div class="layout">
+    <ol id="list" class="trophy-list"></ol>
+    <aside id="detail" class="detail" aria-live="polite"></aside>
+  </div>
+</section>
+
+<section id="roadmap-view" hidden>
+  <p class="roadmap-intro">Five stages, in the order we recommend playing them. Stages 1–4 cover every trophy on the list; stage 5 is the final percent and the platinum itself. Click any trophy to open it in the tracker.</p>
+  <div id="roadmap"></div>
+</section>
+
+<footer>
+  <p>Trophy names and descriptions are the official PlayStation list for Grand Theft Auto VI on PS5. Guides are written for this page in our own words; each one cites its sources beside it. Progress is stored only in your browser (localStorage) — export it to keep a backup. An unofficial fan guide; not affiliated with Rockstar Games or PlayStation.</p>
+</footer>
+
+<script src="app.js"></script>
+</body>
+</html>
